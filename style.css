@@ -1,0 +1,513 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Serif JP', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* ---home--- */
+#bgVideo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9){
+    #bgVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    #bgVideo{
+        width: auto;
+        height: 100%;
+    }
+}
+#home{
+    height:100VH;
+    background: rgba(0, 0, 0, 0.623);
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+#head{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(0, 255, 242, 0.178);
+    height: auto;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+#logo{
+    cursor: pointer;
+}
+#logo span{
+    color: yellow;
+    font-size: 40px;
+}
+#logo h2{
+    color: white;
+    width: 215px;
+}
+
+nav ul{
+    display: flex;
+    width:750px;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 5px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+nav ul li:hover{
+    background: cyan;
+}
+nav ul li a:hover{
+    color: white;
+}
+nav ul li a{
+    color: cyan;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+
+#body-txt{
+    padding: 100px;
+    text-align: center;
+}
+#body-txt h1{
+    color: rgb(255, 187, 0);
+    font-size: 60px;
+    margin-bottom: 50px;
+
+}
+#body-txt pre{
+    font-size: 40px;
+    color: wheat;
+}
+#body-txt pre::first-letter{
+    color: cyan;
+}
+
+button{
+    color: yellow;
+    background: rgba(0, 255, 255, 0.26);
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 50px auto;
+
+}
+button:focus{
+    outline: none;
+}
+button:hover{
+    background-color: cyan;
+    color: white;
+}
+/* -----features----- */
+.title{
+    width: 100px;
+    margin: auto;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    color: #f56e0d;
+    position: relative;
+}
+.title::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(#f76b08d0, rgba(218, 109, 109, 0.336) );
+    width: 50px;
+    height: 40px;
+    top: -8px;
+    left: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+h1{
+    text-align: center;
+    color: cyan;
+}
+
+#why-wraper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 100px;
+    overflow: hidden;
+}
+#why-txt{
+    flex-basis: 60%;
+    margin-right: 10px;
+}
+#why-img{
+    flex-basis: 35%;
+}
+#why-img img{
+    width: 100%;
+   height: auto;
+   border-radius: 10px;
+   box-shadow: 5px 5px 20px 10px gray;
+}
+.sin-why{
+    width: 450px;
+    margin: 20px auto;
+    text-align: left;
+}
+.sin-why h2{
+    color: #f56e0d;
+}
+.sin-why i{
+    border: 1px solid #f56e0d;
+    padding: 7px;
+    border-radius: 8px;
+}
+.sin-why small{
+    text-align: left;
+}
+
+/* ------Services----- */
+#service{
+    overflow: hidden;
+    background: url('img/bg1.jpg'), rgba(0, 0, 0, 0.514);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 2px 80px 2px;
+    margin-bottom: 60px;
+    
+}
+#ser-con{
+    width: 90%;
+    margin:50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.sin-ser{
+    position: relative;
+    flex-basis: 30%;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+}
+.sin-ser img{
+    width: 100%;
+    border-radius: 30px;
+}
+.sin-ser:hover{
+    box-shadow: 5px 5px 20px 10px rgb(240, 144, 144);
+    transform: translateY(-10px);
+    transition: 1s;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.527);
+    opacity: 0;
+    transition: 1s;
+    border-radius: 30px;
+}
+.sin-ser:hover .overlay{
+    opacity: 1;
+}
+.serDes{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+    width: 80%;
+    margin: auto;
+    opacity: 0;
+}
+.serDes h2{
+    font-size: 30px;
+}
+hr{
+    width: 60%;
+    margin: 10px auto;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+.sin-ser:hover .serDes{
+    bottom: 30%;
+    color: yellow;
+    opacity: 1;
+}
+/* --Clients-- */
+#clients{
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+#clients-con{
+    width: 70%;
+    margin:20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.client-img{
+    flex-basis: 8%;
+    
+}
+.client-img img{
+    width: 100%;
+    filter: grayscale(100);
+}
+.client-img img:hover{
+    filter: grayscale(0);
+}
+
+
+/* -- testimonial  -- */
+#testimonial{
+    overflow: hidden;
+    background:linear-gradient(rgba(255, 255, 255, 0.507), rgba(0, 255, 255, 0.603)), url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* margin-bottom: 70px; */
+    padding: 95px 2px 160px 2px;
+}
+
+
+#tes-con{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sin-tes{
+    background: rgba(0, 0, 0, 0.452);
+    border-radius: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+    flex-basis: 30%;
+    text-align: center;
+    padding: 20px;
+    margin-left: 15px;
+    transition: 1s;
+}
+.sin-tes:hover{
+    background: rgba(0, 0, 0, 0.795);
+    transform: translateY(-10px);
+    box-shadow: 7px 7px 25px red;
+}
+.sin-tes img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.sin-tes:hover img{
+    box-shadow: 7px 7px 25px 10px red;
+}
+.user-nam p{
+    color: rgb(217, 255, 0);
+    font-weight: 700;
+}
+
+.user-nam small{
+    color: cyan;
+
+}
+.user-comment small{
+    color: white;
+}
+
+/* -- Contact  -- */
+#contact{
+    overflow: hidden;
+    background:linear-gradient(rgba(0, 255, 255, 0.603), bisque);
+    padding: 90px 2px 150px 2px;
+}
+#contact-con{
+    width: 100%;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+#contact-form{
+    flex-basis: 50%;
+    
+}
+input{
+    padding: 10px;
+    width: 330px;
+    border: 1px solid cyan;
+}
+label{
+    font-weight: 600;
+}
+input:focus{
+    outline: none;
+}
+textarea{
+    border: 1px solid cyan;
+}
+textarea:focus{
+    outline: none;
+}
+#map{
+    flex-basis: 50%;
+    box-shadow: 5px 5px 20px gray;
+}
+
+/* -- about  -- */
+#about{
+    overflow: hidden;
+    background: black;
+    color: white;
+    padding:100px 2px 100px 2px;
+}
+#about-con{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.col1{
+    flex-basis: 30%;
+}
+
+.col2{
+    flex-basis: 30%;
+}
+.col3{
+    flex-basis: 20%;
+}  
+.col4{
+    flex-basis: 20%;
+}
+.col4 .fa{
+    color: cyan;
+}
+.col li{
+    list-style: none;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.app{
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width:1232px){
+    #logo{
+        flex-basis: 100%;
+        margin: auto;
+    }
+    #navbar{
+        margin: auto;
+    }
+    nav ul{
+        flex-basis: 100%;
+        margin: auto;
+    }
+    #logo h2{
+        margin: auto;
+    }
+    #body-txt h1{
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    #body-txt{
+        padding: 70px;
+    }
+    #body-txt pre{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:1157px){
+    .sin-ser{
+        flex-basis:auto;
+        margin:20px auto;
+        
+    }
+}
+
+@media screen and (max-width:900px){
+    #tes-con{
+        flex-wrap: wrap;
+
+    }
+    .sin-tes{
+        flex-basis: 100%;
+    }
+}
+@media screen and (max-width:1001px){
+    #contact-con{
+        flex-wrap: wrap;
+    }
+    #contact-form{
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width:875px){
+    .col{
+        flex-basis: 80%;
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width:1111px){
+    #why-txt{
+        flex-basis: 100%;
+    }
+    #why-img{
+        flex-basis: 50%;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
